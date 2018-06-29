@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#landing {
+    position: relative;
+}
+
+#landing #bg-img {
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    transition: left 0.4s ease;
+    left: 0;
+}
+
+#landing #bg-img.login {
+    left: 50vw;
+}
+
+#landing #bg-img div{
+    height: 100%;
+    width: 100%;
+}
+
+#landing #bg-img .signup {
+    background: url('../../img/signup.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.50);
+}
+
+#landing #bg-img .login {
+    background: url('../../img/bank.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.50);
+}
+
+#landing .content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+#landing .content > div {
+    min-width: 50vw;
+}
+
+#landing .content > div .form{
+    padding: 10px 50px;
+    padding-top: 50px;
+}
+
+#landing .content > div .form .form-title {
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 0.5px solid #e2e2e2;
+}
+
+#landing .content > div .controls > div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#landing .content > div .controls.login > div{
+    flex-direction: row-reverse;
+}
+
+#landing .content > div .controls > div .icon:hover{
+    color: #555;
+    cursor: pointer;
+}
+
+#landing .content > div .controls > div .back {
+    font-weight: lighter;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#landing .content > div .inputs {
+    margin-top: 25px;
+}
+
+#landing .content > div .inputs input {
+    border: 0.5px solid #e2e2e2;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    display: block;
+    width: 100%;
+    transition: border 0.3s ease;
+}
+
+#landing .content > div .inputs input:focus {
+    border: 0.5px solid #a44153;
+}
+
+#signup {
+    opacity: 0;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group .form-group {
+    width: 47%;
+}
+
+.button-group {
+    display: flex;
+}
+
+.button-group .primary {
+    background-color: #a44153;
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+    max-width: 200px;
+}
+
+.button-group .primary:hover {
+    background-color: #be495e;
+}

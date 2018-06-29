@@ -6,7 +6,7 @@ public class DBConnection {
 	private String	url		= "jdbc:mysql://localhost:3306/";
 	private String	database	= "SabR";
 	private String	username	= "root";
-	private String	password	= "1234";
+	private String	password	= "040495Slrp_";
 	public Connection getConnection() {
 		
 		try {
