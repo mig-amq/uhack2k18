@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fontawesome/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/dashboard.css' %}">
+    
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</head>
+<body>
+    <div class="modal" tabindex="-1" role="dialog" id="calibrations">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body" id="questions">
+                    <div class="go-up question-block question-show" data-dot-id="1">
+                        <div class="question">
+                            What is your OFW family member's salary?
+                        </div>
+                        
+                        <input type="number" step="0.01" min="0" id="salary">
+                    </div>
+                    
+                    <div class="question-block" data-dot-id="2">
+                        <div class="question">
+                            Are you currently saving?
+                        </div>
+                        
+                        <input type="radio" name="saving" id="yesaving" checked> <label for="yesaving">Yes</label>
+                        <input type="radio" name="saving" id="nosaving"> <label for="nosaving">No</label>
+                    </div>
+                    
+                    <div class="question-block" data-dot-id="3">
+                        <div class="question">
+                            How much did you save?
+                        </div>
+                        
+                        <input type="number" step="0.01" min="0" id="saved">
+                    </div>
+                    
+                    <div class="question-block" data-dot-id="4">
+                        <div class="question">
+                            How much are you willing to save from now on?
+                        </div>
+                        
+                        <input type="number" step="0.01" min="0" id="wsave">
+                        <br>
+                        <input type="radio" name="wsaving" id="d" checked> <label for="d">Daily</label>
+                        <input type="radio" name="wsaving" id="w"> <label for="w">Weekly</label>
+                        <input type="radio" name="wsaving" id="m"> <label for="m">Monthly</label>
+                    </div>
+                    
+                    <a id="prev" class="prev disabled" onclick="move(-1, this)">&#10094;</a>
+                    <a id="next" class="next" onclick="move(1, this)">&#10095;</a>
+                </div>
+                
+                <div class="modal-footer" id="dots">
+                    <span data-dot-id="1" class="dot active"></span>
+                    <span data-dot-id="2" class="dot"></span>
+                    <span data-dot-id="3" class="dot"></span>
+                    <span data-dot-id="4" class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" data-target="home">
+                <i class="fas fa-home fa-2x  icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link" data-target="savings">
+                <i class="fas fa-calculator fa-2x  icon"></i>
+            </a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link" data-target="expenses"><i class="fas fa-money-check-alt fa-2x icon"></i></a></li>
+    </ul>
+
+    
+    <!--  ADD CONDITIONS FOR FIRST TIME USERS  -->
+    <script src="{% static 'assets/js/questions.js' %}"></script>
+    
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <script src="{% static 'assets/js/aos.js' %}"></script>
+    <script src="{% static 'assets/fontawesome/js/all.js' %}"></script>
+    <script src="{% static 'assets/js/chart.js' %}"></script>
+</body>
+</html>
