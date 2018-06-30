@@ -72,7 +72,7 @@
     
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a href="#" class="nav-link active" data-target="home">
+            <a href="#" class="nav-link active" data-target="home-group">
                 <i class="fas fa-home fa-2x  icon"></i>
             </a>
         </li>
@@ -87,8 +87,18 @@
     
     <!--  ADD CONDITIONS FOR FIRST TIME USERS  -->
     <!-- <script src="{% static 'assets/js/questions.js' %}"></script> -->
-<div id="savings-group">
-    <div class="container" height = "200" width= "200">
+
+    <div id="home-group" class="home-group-show" style="text-align: center;">
+        <div>    
+            <b>Account Balance: </b> 80000
+        </div>
+        <h1 style="text-align: center; margin-top: 10vh;">“If you're saving, you're succeeding.”<br>
+            &mdash; Steve Burkholder</h1> <br/> <br/>
+        <img src="{% static 'img/infograph.png' %}" width="500" height="700">
+        
+    </div>
+    <div id="savings-group">
+    <div class="container" height = "500" width= "700">
             <canvas id="myChart" ></canvas>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         </div>
