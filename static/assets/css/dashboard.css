@@ -110,7 +110,13 @@ a {
 .expenses {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     padding: 0 15px;
+    flex-grow: 2;
+}
+
+.expenses > div:first {
+    width: 25vw;
 }
 
 #expenses-group {   
