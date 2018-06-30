@@ -89,26 +89,39 @@
     <!-- <script src="{% static 'assets/js/questions.js' %}"></script> -->
 <div id="savings-group">
     <div class="container" height = "200" width= "200">
-            <canvas id="myChart" ></canvas>
+            <div style = "margin-left:25vw">
+                Money to save per month
+                <input type="number" id = "Savings">
+                <button id = "compute">Compute</button>
+            </div>
+            <canvas id="myChart" style = "visibility:hidden"></canvas>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         </div>
         
         <script>
-            const myChart = document.getElementById('myChart').getContext('2d');
-            
+            $("#compute").click(function(){
+                const myChart = document.getElementById('myChart').getContext('2d');
+                var money = $("#Savings").val();
+                var arr = [];
+                arr.push(money);
+                arr.push(money*6);
+                arr.push(money*12);
+                arr.push(money*120);
+
             let massPopChart = new Chart(myChart,{
                                             type:'line',
                                             data:{
-                                            labels:['Testing1','Testing2','Testing3'],
+                                            labels:['1 Month','6 Months','1 Year', '10 Years'],
                                             datasets:[{
-                                                label:'Sample',
-                                                data:[
-                                                    1,2,3,4
-                                                ],
+                                                label:'Amount Saved:',
+                                                data:arr,
                                             }]
                                             },
                                             
                                             });
+                $("#myChart").css("visibility","visible");
+            });
+            
     
         </script>
 </div>
