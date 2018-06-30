@@ -77,7 +77,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link" data-target="savings">
+            <a href="#" class="nav-link" data-target="savings-group">
                 <i class="fas fa-calculator fa-2x  icon"></i>
             </a>
         </li>
@@ -87,6 +87,31 @@
     
     <!--  ADD CONDITIONS FOR FIRST TIME USERS  -->
     <!-- <script src="{% static 'assets/js/questions.js' %}"></script> -->
+<div id="savings-group">
+    <div class="container" height = "200" width= "200">
+            <canvas id="myChart" ></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        </div>
+        
+        <script>
+            const myChart = document.getElementById('myChart').getContext('2d');
+            
+            let massPopChart = new Chart(myChart,{
+                                            type:'line',
+                                            data:{
+                                            labels:['Testing1','Testing2','Testing3'],
+                                            datasets:[{
+                                                label:'Sample',
+                                                data:[
+                                                    1,2,3,4
+                                                ],
+                                            }]
+                                            },
+                                            
+                                            });
+    
+        </script>
+</div>
 <div id="expenses-group">
     <b class="title">Expense Allocation Tracker</b><br>
     <div class="expenses">

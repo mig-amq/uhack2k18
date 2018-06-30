@@ -72,6 +72,7 @@ $(document).ready(function () {
 
         var target = $(this).attr('data-target');
 
+        console.log(target);
         $("#" + target).addClass(target + "-show");
     });
 });

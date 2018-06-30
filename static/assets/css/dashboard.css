@@ -119,11 +119,11 @@ a {
     width: 25vw;
 }
 
-#expenses-group {   
+#expenses-group, #savings-group {   
     display: none;
 }
 
-.expenses-group-show {
+.expenses-group-show, .savings-group-show {
     display: block !important;
 }
 
