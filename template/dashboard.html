@@ -81,21 +81,45 @@
                 <i class="fas fa-calculator fa-2x  icon"></i>
             </a>
         </li>
-        <li class="nav-item"><a href="#" class="nav-link" data-target="expenses"><i class="fas fa-money-check-alt fa-2x icon"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link" data-target="expenses-group"><i class="fas fa-money-check-alt fa-2x icon"></i></a></li>
     </ul>
 
     
     <!--  ADD CONDITIONS FOR FIRST TIME USERS  -->
-    <script src="{% static 'assets/js/questions.js' %}"></script>
+    <!-- <script src="{% static 'assets/js/questions.js' %}"></script> -->
+<div id="expenses-group">
+    <b class="title">Expense Allocation Tracker</b><br>
+    <div class="expenses">
+        <div>
+            <form id="tracker">
+                <div class="form-group">
+                    <label for="category">Category Name:</label>
+                    <input type="text" id="category" class="form-control form-control-sm">
+                </div>
+            
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" step="0.1" id="amount" class="form-control form-control-sm">
+                </div>
+    
+                <div class="form-group">
+                    <label for="color">Category Color:</label>
+                    <input type="color" id="color" class="form-control form-control-sm">
+                </div>
+    
+                
+                <input type="submit" value="Submit" class="primary">
+            </form>
+        </div>
+    
+        <div id="categories">
+    
+        </div>
+    </div>
+</div>
+
     
     <script src="{% static 'assets/js/dashboard.js' %}"></script>
-    <form action="/action_page.php">
-<b>Expense Allocation Tracker</b><br>
-Education: <input type="text" name="Expense1"><br>
-Bills: <input type="text" name="Expense2"><br>
-Food: <input type="text" name="Expense3"><br>
-<input type="submit" value="Submit">
-</form>
     <script src="{% static 'assets/js/aos.js' %}"></script>
     <script src="{% static 'assets/fontawesome/js/all.js' %}"></script>
     <script src="{% static 'assets/js/chart.js' %}"></script>

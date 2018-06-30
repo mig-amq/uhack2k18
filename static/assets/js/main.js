@@ -44,4 +44,34 @@ $(document).ready(function () {
         $("#login").css("z-index", 10);
         $("#signup").css("z-index", -1);
     }
+
+    $("#tracker").on("submit", function (e) {
+        e.preventDefault();
+
+        var category = $("#category").val();
+        var amount = $("#amount").val();
+        var color = $("#color").val();
+
+        var ticket = $("<div class='ticket'></div>");
+        var title = $("<div class='ttitle'> " + category + "</div>")
+        var amt = $("<div class='amt'> Php. " + parseFloat(amount) + "</div>");
+        ticket.css("background-color", color);
+
+        ticket.append(title);
+        ticket.append(amt);
+        
+        $("#categories").append(ticket);
+    });
+
+    $(".nav-link").click(function (e) {
+        $(".nav-link").each(function (index, item) {
+            var target = $(item).attr('data-target');
+            
+            $("#" + target).removeClass();
+        });
+
+        var target = $(this).attr('data-target');
+
+        $("#" + target).addClass(target + "-show");
+    });
 });

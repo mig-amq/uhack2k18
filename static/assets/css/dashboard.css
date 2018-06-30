@@ -94,3 +94,69 @@ body {
 a {
     outline: none;
 }
+
+.primary {
+    background-color: #a44153;
+    min-width: 100px;
+    color: #ffffff;
+    border: 1px solid #a44153;
+    cursor: pointer;    
+}
+
+.primary:hover {
+    background-color: #bb4b5f;
+}
+
+.expenses {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+}
+
+#expenses-group {   
+    display: none;
+}
+
+.expenses-group-show {
+    display: block !important;
+}
+
+.title {
+    display: block;
+    margin: 25px 0px 0px 10px;
+    font-size: 24px;
+}
+
+#tracker {
+    width: 250px;
+}
+
+#categories {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 5;
+}
+
+.ticket {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    margin: 10px;
+    min-width: 250px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.ticket .ttitle {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px dashed #fff;
+}
+
+.ticket .amt {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: lighter;
+}
